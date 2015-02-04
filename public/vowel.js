@@ -8,6 +8,13 @@
 */
 
 function isVowel(letter) {
+	
+	if (["a", "e", "i", "o", "u"].indexOf(letter.toLowerCase()) > -1) {
+
+		return true;
+	}
+
+	return false;
 
 }
 
@@ -20,5 +27,23 @@ function isVowel(letter) {
 */
 
 function countVowels(word) {
+
+	var count = 0;
+	var numberOfVowels = 0;
+
+	while (count < word.length) {
+
+		var letter = word[count];
+
+		var isItActuallyAVowel = isVowel(letter);
+
+		if (isItActuallyAVowel === true) {
+			numberOfVowels++;
+		}
+			
+		count++;
+	}
+
+	return numberOfVowels;
 
 }
